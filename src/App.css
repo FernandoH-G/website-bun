@@ -1,0 +1,153 @@
+:root {
+  --pri: #282c34;
+  --sec: #343a40;
+  --ter: #00818A;
+  --teralt: hsl(184, 100%, 41%);
+  /* ter light? --ter: #00eeff; */
+  --txt: white;
+  --tablets: 768px;
+}
+
+p {
+  color: var(--txt);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ter)
+}
+
+a:link,
+a:visited {
+  color: var(--ter);
+  text-decoration: none;
+}
+
+/***************************************************************/
+.repo-card {
+  border: 0.25rem solid var(--ter);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 15rem;
+  overflow: scroll;
+}
+
+.repo-card:hover {
+  border: 0.25rem solid var(--teralt);
+}
+
+.img-logo {
+  /* max-width: 20%; */
+  width: clamp(2rem, 5rem, 10rem);
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.me-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.img-me {
+  /* width: clamp(5rem, 15rem, 20rem); */
+  width: 15rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+}
+
+.nav-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+.center-width {
+  width: 85%;
+}
+
+.video-card {
+  /* Affects box-shadow radius */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /* margin-bottom: 5px; */
+}
+
+.video-card:hover,
+.video-card:focus {
+  /* box-shadow: 0 0.5rem 0.5rem -0.4rem var(--ter); */
+  box-shadow: 0 0.5rem 0.5rem 0.4rem var(--ter);
+  /* box-shadow: 0.5rem 0.5rem 0.5rem var(--ter), -0.5rem -0.5rem 0.5rem var(--ter); */
+  transform: translateY(-0.25rem);
+}
+
+.video-card-info {
+  min-height: 85px;
+  padding: 5px;
+  /* box shadows break border radius... */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: var(--sec);
+  text-align: center;
+}
+
+.flair-text {
+  text-decoration: underline;
+}
+
+/* Breakpoints
+640px - phones
+768px - tablets
+1024px - laptops
+1280px - desktops
+ */
+@media screen and (min-width: 768px) {
+  .center-width {
+    /* 
+    Is there a way to get this media query effect
+    by using clamp()? 
+    */
+    width: 55%
+  }
+
+  .nav-title {
+    text-align: end;
+  }
+
+  .me-section {
+    flex-direction: row;
+  }
+
+  .img-me {
+    margin-right: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+/* @media screen and (min-width: 1280px) {
+} */
+
+/* ARCHIVE */
+@media screen and (max-width: 980px) {
+  .project-info-style {
+    display: block;
+  }
+
+  .column-style {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
+    width: 100%;
+  }
+}
