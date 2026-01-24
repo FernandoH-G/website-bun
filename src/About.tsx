@@ -2,7 +2,7 @@
 // External Imports
 import Typography from '@mui/material/Typography';
 
-import me from "./images/me.jpg"
+import Me from "@images/me.jpg"
 
 function About() {
 
@@ -23,7 +23,7 @@ function About() {
 					className="me-section"
 				>
 					<img
-						src={me}
+						src={Me}
 						alt="me"
 						className="img-me"
 					/>
