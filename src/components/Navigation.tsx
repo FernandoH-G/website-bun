@@ -1,8 +1,7 @@
 // It's easier to down size a png if it's big to begin with.
 // Doesn't lose quality, at least to my eyes.
 
-// Me
-import NavOption from "@component/NavOption";
+import NavOption from "@components/NavOption";
 import MyPig from "@images/my-pig.png"
 
 // External Imports

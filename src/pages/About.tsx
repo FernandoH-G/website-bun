@@ -1,8 +1,9 @@
 
+import Me from "@images/me.jpg"
+
 // External Imports
 import Typography from '@mui/material/Typography';
 
-import Me from "@images/me.jpg"
 
 function About() {
 

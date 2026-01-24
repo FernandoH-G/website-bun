@@ -1,11 +1,9 @@
 
-// Internal
-import Navigation from './component/Navigation';
-import Videos from "./Videos"
-import About from "./About"
-import Home from "./Home"
+import Navigation from '@components/Navigation';
+import Videos from "@pages//Videos"
+import About from "@pages/About"
+import Home from "@pages/Home"
 import './App.css';
-// import Test from "./Endpoint/Test"
 
 // External Imports
 import {
@@ -14,8 +12,8 @@ import {
   createHttpLink,
   InMemoryCache,
 } from '@apollo/client';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom/";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({

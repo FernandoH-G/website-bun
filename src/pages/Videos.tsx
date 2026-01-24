@@ -1,10 +1,8 @@
-// React
 import { useCallback, useEffect, useState } from "react"
 
-// Internal 
-import { type VideoInfoItem, type YoutubeApi } from "./types/types";
-import ToggleGroupInput from "./component/ToggleGroupInput";
-import VideoCard from "./component/VideoCard";
+import { type VideoInfoItem, type YoutubeApi } from "./../types/site-types";
+import ToggleGroupInput from "@components/ToggleGroupInput";
+import VideoCard from "@components/VideoCard";
 
 // External Imports
 import { Grid, Typography } from "@mui/material"
@@ -17,8 +15,8 @@ const SORT_OPTIONS = ["desc", "asc"]
 const Videos = () => {
 
   const [videoInfoItems, setVideoInfoItems] = useState<VideoInfoItem[]>([])
-  const [sortType, setSortType] = useState(SORT_TYPES[0])
-  const [sortOption, setSortOption] = useState(SORT_OPTIONS[0])
+  const [sortType, setSortType] = useState(SORT_TYPES[0] ?? "date")
+  const [sortOption, setSortOption] = useState(SORT_OPTIONS[0] ?? "desc")
 
   const handleSortType = useCallback((
     event: React.MouseEvent<HTMLElement>,
