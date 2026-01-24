@@ -1,7 +1,8 @@
-import { useEffect } from "react"
 
 // External Imports
 import Typography from '@mui/material/Typography';
+
+import me from "./images/me.jpg"
 
 function About() {
 
@@ -22,8 +23,7 @@ function About() {
 					className="me-section"
 				>
 					<img
-						// src="./img_pfp.jpg"
-						src="/img_pfp.jpg"
+						src={me}
 						alt="me"
 						className="img-me"
 					/>

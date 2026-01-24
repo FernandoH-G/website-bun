@@ -4,6 +4,7 @@
 // Me
 // import ic_my_pig from "./../Images/ic_my_pig_512x512.png"
 import NavOption from "./NavOption";
+import myPig from "./../images/my-pig.png"
 
 // External Imports
 import { Link, useLocation } from "react-router-dom";
@@ -69,7 +70,7 @@ const Navigation = () => {
 							to="/"
 						>
 							<img
-								src="/ic_my_pig_512x512.png"
+								src={myPig}
 								alt="FH-G logo"
 								className="img-logo"
 							/>
