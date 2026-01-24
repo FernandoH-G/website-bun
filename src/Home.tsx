@@ -3,7 +3,7 @@ import { useEffect } from "react"
 // Me
 import { GET_PINNED_REPOS } from "./util/query"
 import { type PinnedRepoEdge } from "./types/types";
-import RepoCard from "./Component/RepoCard";
+import RepoCard from "./component/RepoCard";
 
 // External Imports
 import { DateTime } from "luxon";

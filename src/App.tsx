@@ -1,6 +1,6 @@
 
 // Internal
-import Navigation from './Component/Navigation';
+import Navigation from './component/Navigation';
 import Videos from "./Videos"
 import About from "./About"
 import Home from "./Home"
