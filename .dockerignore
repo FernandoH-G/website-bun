@@ -8,7 +8,7 @@ node_modules
 dist
 
 # Ignore sensitive environment variables once it's deployed in k8s...
-#.env
+.env
 
 # Ignore Docker-related files
 Dockerfile*
