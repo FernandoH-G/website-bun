@@ -4,9 +4,9 @@ import { GET_PINNED_REPOS } from "@util/query"
 import RepoCard from "@components/RepoCard";
 
 // External Imports
+import { CircularProgress, Grid } from "@mui/material";
 import { DateTime } from "luxon";
 import { useQuery } from '@apollo/client'
-import { Grid } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
 function Home() {
@@ -36,9 +36,24 @@ function Home() {
 					justifyContent: "center"
 				}}
 			>
-				<Typography>
-					Loading Pinned Repos...
-				</Typography>
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center"
+					}}
+				>
+					<Typography
+						gutterBottom
+					>
+						Pinned Repos
+					</Typography>
+					<CircularProgress
+						style={{
+							color: "white"
+						}}
+					/>
+				</div>
 			</main>
 		)
 	}

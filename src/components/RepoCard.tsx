@@ -3,7 +3,7 @@ import { GET_REPO_COMMITS } from "@util/query"
 import { parseDate } from "@/util/helpers"
 
 // External Imports
-import { Divider, Typography } from '@mui/material'
+import { CircularProgress, Divider, Typography } from '@mui/material'
 import { useQuery } from '@apollo/client'
 
 type RepoCardProps = {
@@ -49,9 +49,24 @@ const RepoCard = (props: RepoCardProps) => {
           justifyContent: "center"
         }}
       >
-        <Typography>
-          Loading Commits...
-        </Typography>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+          }}
+        >
+          <Typography
+            gutterBottom
+          >
+            Commits
+          </Typography>
+          <CircularProgress
+            style={{
+              color: "white"
+            }}
+          />
+        </div>
       </main>
     )
   }
