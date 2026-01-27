@@ -1,21 +1,10 @@
-# bun-react-template
+# fernandoh-g.tech
+This website contains my pinned github comments, sourced from the graphql github api.  
+Powered by Bun.  
+Containerized for portability.
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To start a development server:
-
-```bash
-bun dev
-```
-
-To run for production:
-
-```bash
-bun start
-```
-
-This project was created using `bun init` in bun v1.3.6. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+### Todos
+* Add todos (the ones in this list) to the README.md file.
+* Have mobile view of the site hide commits by default. When the expand button is clicked, it will animate down (and up when collapsing).
+* Have scrollable components auto scroll. When hovered over, it will pause scrolling. When hovered away, it will resume auto scroll.
+* Have image in /about be clickable. When clicked, it will flip through my images.
