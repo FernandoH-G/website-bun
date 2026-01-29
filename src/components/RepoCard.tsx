@@ -109,7 +109,12 @@ const RepoCard = (props: RepoCardProps) => {
           :
           flipped === true
             ?
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
               <RepoCommits
                 commits={commits}
               />
@@ -117,10 +122,7 @@ const RepoCard = (props: RepoCardProps) => {
                 onClick={() => {
                   setFlipped(prevValue => !prevValue)
                 }}
-                style={{
-                  marginTop: "0.5rem",
-                  alignSelf: "center"
-                }}
+                className="repo-card-button"
               >
                 Repo
               </button>
@@ -139,12 +141,9 @@ const RepoCard = (props: RepoCardProps) => {
                 onClick={() => {
                   setFlipped(prevValue => !prevValue)
                 }}
-                style={{
-                  marginTop: "0.5rem",
-                  alignSelf: "center"
-                }}
+                className="repo-card-button"
               >
-                View Commits
+                Commits
               </button>
             </div>
       }

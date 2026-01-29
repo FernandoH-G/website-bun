@@ -29,7 +29,17 @@ a:visited {
 }
 
 /***************************************************************/
-.commit-date-style, .repo-name-style {
+.repo-card-button {
+  margin-top: 0.5rem;
+  align-self: center;
+  color: white;
+  background-color: var(--sec);
+  border: 0.1rem solid var(--ter);
+  border-radius: 0.5rem;
+}
+
+.commit-date-style,
+.repo-name-style {
   color: var(--ter)
 }
 
