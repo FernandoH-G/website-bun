@@ -23,7 +23,6 @@ const ImageCarousel = () => {
       src={currImg}
       alt="me"
       className="img-me"
-      // height="20rem"
     />
   )
 }
