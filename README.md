@@ -4,6 +4,7 @@ Powered by Bun.
 Containerized for portability.
 
 ### Todos
+* Have mobile commits button be floating near the bottom of the repo card.
 * Have scrollable components auto scroll. When hovered over, it will pause scrolling. When hovered away, it will resume auto scroll.
 * Have image in /about be clickable. When clicked, it will flip through my images.
 * Add flip animation to repo cards.  
