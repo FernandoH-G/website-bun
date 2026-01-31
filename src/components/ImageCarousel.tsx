@@ -23,6 +23,7 @@ const ImageCarousel = () => {
       src={currImg}
       alt="me"
       className="img-me"
+
     />
   )
 }
