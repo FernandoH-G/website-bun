@@ -16,7 +16,8 @@ COPY --from=install /temp/dev/node_modules node_modules
 # Copy everything except items listed in .dockerignore to WORKDIR
 COPY . .
 
-# In the future, pass in environment variables into the build process.
+ARG BUN_PUBLIC_GH_API_KEY
+# bun run build runs the build script in package.json.
 RUN bun run build
 
 EXPOSE 3000
