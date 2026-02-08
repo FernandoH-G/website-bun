@@ -81,7 +81,8 @@ a:visited {
 
 .img-me {
   /* width: clamp(5rem, 15rem, 20rem); */
-  width: 15rem;
+  width: 11rem;
+  height: 15rem;
   margin-bottom: 0.5rem;
   border-radius: 1rem;
 }

@@ -1,5 +1,5 @@
 
-import Me from "@images/me.jpg"
+import ImageCarousel from "@/components/ImageCarousel";
 
 // External Imports
 import Typography from '@mui/material/Typography';
@@ -23,11 +23,7 @@ function About() {
 				<div
 					className="me-section"
 				>
-					<img
-						src={Me}
-						alt="me"
-						className="img-me"
-					/>
+					<ImageCarousel />
 					<div
 						style={{
 							display: "flex",
