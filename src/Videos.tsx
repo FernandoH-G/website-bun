@@ -3,8 +3,8 @@ import { useCallback, useEffect, useState } from "react"
 
 // Internal 
 import { type VideoInfoItem, type YoutubeApi } from "./types/types";
-import ToggleGroupInput from "./Component/ToggleGroupInput";
-import VideoCard from "./Component/VideoCard";
+import ToggleGroupInput from "./component/ToggleGroupInput";
+import VideoCard from "./component/VideoCard";
 
 // External Imports
 import { Grid, Typography } from "@mui/material"
