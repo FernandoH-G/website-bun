@@ -29,6 +29,9 @@ a:visited {
 }
 
 /***************************************************************/
+.commit-date-style, .repo-name-style {
+  color: var(--ter)
+}
 
 .site-divicer {
   border-color: var(--ter);
@@ -43,7 +46,7 @@ a:visited {
 }
 
 .repo-card:hover {
-  border: 0.25rem solid var(--teralt);
+  border: 0.25rem solid var(--txt);
 }
 
 .img-logo {

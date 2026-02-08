@@ -4,6 +4,7 @@ import { parseDate } from "@/util/helpers"
 
 // External Imports
 import { CircularProgress, Divider, Typography } from '@mui/material'
+import { OpenInNew } from '@mui/icons-material';
 import { useQuery } from '@apollo/client'
 
 type RepoCardProps = {
@@ -83,17 +84,36 @@ const RepoCard = (props: RepoCardProps) => {
     <div
       className="repo-card"
     >
-      <Typography
-        fontSize="2.5rem"
+      <a
+        href={url}
+        target='_blank'
+        rel='noreferrer'
       >
-        <a
-          href={url}
-          target='_blank'
-          rel='noreferrer'
+        <div
+          style={{
+            display: "inline-block"
+          }}
         >
-          {name}
-        </a>
-      </Typography>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "baseline"
+            }}
+          >
+            <Typography
+              fontSize="2.5rem"
+              marginRight="0.25rem"
+              className="repo-name-style"
+            >
+              {name}
+            </Typography>
+            <OpenInNew
+              // htmlColor="white"
+              className="repo-name-style"
+            />
+          </div>
+        </div>
+      </a>
       <div
         style={{
           minHeight: "7rem"
@@ -121,7 +141,6 @@ const RepoCard = (props: RepoCardProps) => {
           marginTop: "0.5rem",
           marginBottom: "0.5rem",
           borderColor: "white"
-          // borderColor: "#8db8bb"
         }}
       />
       {
@@ -130,15 +149,35 @@ const RepoCard = (props: RepoCardProps) => {
             <div
               key={idx}
             >
-              <Typography>
-                <a
-                  href={edge.node.url}
-                  target='_blank'
-                  rel='noreferrer'
+              <a
+                href={edge.node.url}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div
+                  style={{
+                    display: "inline-block"
+                  }}
                 >
-                  {parseDate(edge.node.committedDate)}
-                </a>
-              </Typography>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center"
+                    }}
+                  >
+                    <Typography
+                      marginRight="0.25rem"
+                      className="commit-date-style"
+                    >
+                      {parseDate(edge.node.committedDate)}
+                    </Typography>
+                    <OpenInNew
+                      className="commit-date-style"
+                      fontSize="small"
+                    />
+                  </div>
+                </div>
+              </a>
               <Typography
                 gutterBottom
               >
@@ -148,7 +187,7 @@ const RepoCard = (props: RepoCardProps) => {
           )
         })
       }
-    </div>
+    </div >
   )
 }
 
