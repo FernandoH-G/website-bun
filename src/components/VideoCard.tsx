@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-// Internal
-import { type VideoInfoItem } from '../types/types';
+import { type VideoInfoItem } from './../types/site-types';
 
 // External Imports
 import { Typography } from '@mui/material';

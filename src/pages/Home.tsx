@@ -1,9 +1,7 @@
-import { useEffect } from "react"
 
-// Me
-import { GET_PINNED_REPOS } from "./util/query"
-import { type PinnedRepoEdge } from "./types/types";
-import RepoCard from "./component/RepoCard";
+import { type PinnedRepoEdge } from "./../types/site-types";
+import { GET_PINNED_REPOS } from "@util/query"
+import RepoCard from "@components/RepoCard";
 
 // External Imports
 import { DateTime } from "luxon";

@@ -29,9 +29,18 @@
       "@images/*": [
         "./public/images/*"
       ],
-      "@component/*": [
-        "./src/component/*"
-      ]
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@util/*": [
+        "./src/util/*"
+      ],
+      // "@types/*": [
+      //   "./src/types/*"
+      // ],
     },
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
