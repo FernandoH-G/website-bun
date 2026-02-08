@@ -2,9 +2,8 @@
 // Doesn't lose quality, at least to my eyes.
 
 // Me
-// import ic_my_pig from "./../Images/ic_my_pig_512x512.png"
-import NavOption from "./NavOption";
-import myPig from "./../images/my-pig.png"
+import NavOption from "@component/NavOption";
+import MyPig from "@images/my-pig.png"
 
 // External Imports
 import { Link, useLocation } from "react-router-dom";
@@ -70,7 +69,7 @@ const Navigation = () => {
 							to="/"
 						>
 							<img
-								src={myPig}
+								src={MyPig}
 								alt="FH-G logo"
 								className="img-logo"
 							/>
