@@ -6,4 +6,5 @@ Containerized for portability.
 ### Todos
 * Have scrollable components auto scroll. When hovered over, it will pause scrolling. When hovered away, it will resume auto scroll.
 * Have image in /about be clickable. When clicked, it will flip through my images.
-* When in mobile mode, have repo cards flip when clicked to reveal commits on the other side.
+* Add flip animation to repo cards.
+~~* When in mobile mode, have repo cards flip when clicked to reveal commits on the other side.~~

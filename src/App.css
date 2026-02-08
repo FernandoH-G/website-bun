@@ -30,12 +30,13 @@ a:visited {
 
 /***************************************************************/
 .repo-card-button {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   align-self: center;
   color: white;
   background-color: var(--sec);
   border: 0.1rem solid var(--ter);
   border-radius: 0.5rem;
+  font-size: larger;
 }
 
 .commit-date-style,
