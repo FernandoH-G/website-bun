@@ -1,3 +1,10 @@
+export type RepoInfo = {
+  name: string
+  owner: string
+  updatedStr: string
+  description: string | null
+  url: string
+}
 type PinnedRepoNode = {
   name: string
   description: string | null

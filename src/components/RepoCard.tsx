@@ -1,31 +1,34 @@
+import { useState } from "react";
 
 import { GET_REPO_COMMITS } from "@util/query"
-import { parseDate } from "@/util/helpers"
+import RepoCommits from "@/components/RepoCommits"
+import RepoHeader from "@/components/RepoHeader"
 
 // External Imports
-import { CircularProgress, Divider, Typography } from '@mui/material'
-import { OpenInNew } from '@mui/icons-material';
+import {
+  CircularProgress,
+  Divider,
+  Typography,
+  useTheme,
+  useMediaQuery
+} from '@mui/material'
+import type { RepoInfo } from "@/types/site-types";
 import { useQuery } from '@apollo/client'
 
 type RepoCardProps = {
-  name: string
-  owner: string
-  updatedStr: string
-  description: string | null
-  url: string
+  repoInfo: RepoInfo
 }
 const RepoCard = (props: RepoCardProps) => {
-  const {
-    name,
-    owner,
-    updatedStr,
-    description,
-    url
-  } = props
+  const { repoInfo } = props
+
+  const theme = useTheme();
+  const desktopView = useMediaQuery(theme.breakpoints.up('md'));
 
   const { loading, error, data } = useQuery(GET_REPO_COMMITS, {
-    variables: { name: name, owner: owner },
+    variables: { name: repoInfo.name, owner: repoInfo.owner },
   })
+
+  const [flipped, setFlipped] = useState(false)
 
   if (error) {
     return (
@@ -84,108 +87,66 @@ const RepoCard = (props: RepoCardProps) => {
     <div
       className="repo-card"
     >
-      <a
-        href={url}
-        target='_blank'
-        rel='noreferrer'
-      >
-        <div
-          style={{
-            display: "inline-block"
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline"
-            }}
-          >
-            <Typography
-              fontSize="2.5rem"
-              marginRight="0.25rem"
-              className="repo-name-style"
-            >
-              {name}
-            </Typography>
-            <OpenInNew
-              // htmlColor="white"
-              className="repo-name-style"
-            />
-          </div>
-        </div>
-      </a>
-      <div
-        style={{
-          minHeight: "7rem"
-        }}
-      >
-        {
-          description === null
-            ?
-            <Typography
-              fontSize="1.5rem"
-            >
-              No Description.
-            </Typography>
-            :
-            <Typography
-              fontSize="1.5rem"
-            >
-              {description}
-            </Typography>
-        }
-      </div>
-      <Divider
-        variant="middle"
-        style={{
-          marginTop: "0.5rem",
-          marginBottom: "0.5rem",
-          borderColor: "white"
-        }}
-      />
       {
-        commits.map((edge, idx) => {
-          return (
-            <div
-              key={idx}
-            >
-              <a
-                href={edge.node.url}
-                target='_blank'
-                rel='noreferrer'
+        desktopView === true
+          ?
+          <>
+            <RepoHeader
+              repoInfo={repoInfo}
+            />
+            <Divider
+              variant="middle"
+              style={{
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
+                borderColor: "white"
+              }}
+            />
+            <RepoCommits
+              commits={commits}
+            />
+          </>
+          :
+          flipped === true
+            ?
+            <div>
+              <RepoCommits
+                commits={commits}
+              />
+              <button
+                onClick={() => {
+                  setFlipped(prevValue => !prevValue)
+                }}
+                style={{
+                  marginTop: "0.5rem",
+                  alignSelf: "center"
+                }}
               >
-                <div
-                  style={{
-                    display: "inline-block"
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center"
-                    }}
-                  >
-                    <Typography
-                      marginRight="0.25rem"
-                      className="commit-date-style"
-                    >
-                      {parseDate(edge.node.committedDate)}
-                    </Typography>
-                    <OpenInNew
-                      className="commit-date-style"
-                      fontSize="small"
-                    />
-                  </div>
-                </div>
-              </a>
-              <Typography
-                gutterBottom
-              >
-                {edge.node.message}
-              </Typography>
+                Repo
+              </button>
             </div>
-          )
-        })
+            :
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
+              <RepoHeader
+                repoInfo={repoInfo}
+              />
+              <button
+                onClick={() => {
+                  setFlipped(prevValue => !prevValue)
+                }}
+                style={{
+                  marginTop: "0.5rem",
+                  alignSelf: "center"
+                }}
+              >
+                View Commits
+              </button>
+            </div>
       }
     </div >
   )
