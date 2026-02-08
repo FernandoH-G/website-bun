@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-import MyPig from "@images/my-pig.png"
-import Me from "@images/me.jpg"
+import MeSurprised from "@images/surprised-me-3x2.jpg"
+import Me from "@images/me-3x2.jpg"
 
 
 const ImageCarousel = () => {
@@ -9,7 +9,7 @@ const ImageCarousel = () => {
   const [imageIdx, setImageIdx] = useState(0)
 
   function handleImgClick() {
-    const images = [Me, MyPig]
+    const images = [Me, MeSurprised]
     let idx = imageIdx
     setCurrImg(images[++idx % images.length] ?? "")
     setImageIdx(idx)
