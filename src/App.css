@@ -8,6 +8,11 @@
   --tablets: 768px;
 }
 
+body {
+  margin: 0;
+  background-color: #282c34;
+}
+
 p {
   color: var(--txt);
 }
