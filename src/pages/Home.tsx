@@ -37,7 +37,7 @@ function Home() {
 				}}
 			>
 				<Typography>
-					Loading...
+					Loading Pinned Repos...
 				</Typography>
 			</main>
 		)
@@ -72,6 +72,7 @@ function Home() {
 								>
 									<RepoCard
 										name={edge.node.name}
+										owner={edge.node.owner.login}
 										updatedStr={getDateStr(edge.node.pushedAt)}
 										description={edge.node.description}
 										url={edge.node.url}

@@ -1,9 +1,8 @@
 :root {
   --pri: #282c34;
   --sec: #343a40;
-  --ter: #00818A;
-  --teralt: hsl(184, 100%, 41%);
-  /* ter light? --ter: #00eeff; */
+  /* --oldter: #00818A; */
+  --ter: #8db8bb;
   --txt: white;
   --tablets: 768px;
 }
@@ -30,11 +29,16 @@ a:visited {
 }
 
 /***************************************************************/
+
+.site-divicer {
+  border-color: var(--ter);
+}
+
 .repo-card {
   border: 0.25rem solid var(--ter);
   border-radius: 0.5rem;
   padding: 1rem;
-  height: 15rem;
+  height: 20rem;
   overflow: scroll;
 }
 

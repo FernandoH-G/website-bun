@@ -18,9 +18,9 @@ const NavOption = (props: NavOptionProps) => {
     marginRight: "8px"
   }
   const activeStyle = {
-    color: "#00818A",
+    color: "#8db8bb",
     marginRight: "8px",
-    textShadow: "1px 1px 2px #00818A",
+    textShadow: "1px 1px 2px #8db8bb",
   }
 
   return (
