@@ -38,9 +38,9 @@
       "@util/*": [
         "./src/util/*"
       ],
-      // "@types/*": [
-      //   "./src/types/*"
-      // ],
+      "@site-types/*": [
+        "./src/types/*"
+      ],
     },
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,

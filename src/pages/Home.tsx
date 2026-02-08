@@ -1,5 +1,5 @@
 
-import { type PinnedRepoEdge } from "./../types/site-types";
+import { type PinnedRepoEdge } from "@site-types/site-types";
 import { GET_PINNED_REPOS } from "@util/query"
 import RepoCard from "@components/RepoCard";
 

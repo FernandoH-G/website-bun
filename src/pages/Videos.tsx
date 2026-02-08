@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 
-import { type VideoInfoItem, type YoutubeApi } from "./../types/site-types";
+import { type VideoInfoItem, type YoutubeApi } from "@site-types/site-types";
 import ToggleGroupInput from "@components/ToggleGroupInput";
 import VideoCard from "@components/VideoCard";
 
