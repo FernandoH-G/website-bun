@@ -1,2 +1,2 @@
 [serve.static]
-env = "inline"
+env = "BUN_PUBLIC_*"

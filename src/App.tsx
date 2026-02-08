@@ -23,7 +23,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = process.env.GH_API_KEY;
+  const token = process.env.BUN_PUBLIC_GH_API_KEY;
 
   // Return the headers to the context so httpLink can read them.
   return {
